@@ -37,6 +37,9 @@ imap <right> <nop>
 set ignorecase
 set smartcase
 
+" - Pathogen -
+execute pathogen#infect()
+
 " - etc -
 set autoread
 let mapleader = ","
