@@ -13,6 +13,15 @@ set list
 " - Line numbers -
 set number
 
+" - Colorization"
+syntax enable
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
+colorscheme solarized
+
 " - Disable Cursorkeys -
 map <up> <nop>
 map <down> <nop>
@@ -35,7 +44,10 @@ map <Leader>p <C-^> " Go to previous file
 map <Leader>w :w!<CR>
 
 " - NERDTree -
+" Auto open, if no file supplied
 autocmd vimenter * if !argc() | NERDTree | endif
+" Auto close if only window is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <Leader>n :NERDTreeToggle<CR>
 
 " - Vundle -
@@ -49,6 +61,7 @@ Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-pathogen'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 
