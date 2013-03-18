@@ -13,15 +13,6 @@ set list
 " - Line numbers -
 set number
 
-" - Colorization"
-syntax enable
-if has('gui_running')
-  set background=light
-else
-  set background=dark
-endif
-colorscheme solarized
-
 " - Disable Cursorkeys -
 map <up> <nop>
 map <down> <nop>
@@ -36,9 +27,6 @@ imap <right> <nop>
 " - Search -
 set ignorecase
 set smartcase
-
-" - Pathogen -
-execute pathogen#infect()
 
 " - etc -
 set autoread
@@ -69,3 +57,16 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 
 filetype plugin indent on
+
+" - Pathogen -
+execute pathogen#infect()
+
+" - Colorization"
+syntax enable
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
+colorscheme solarized
+let g:solarized_termcolors=256
