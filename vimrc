@@ -4,7 +4,7 @@
 set smarttab
 set shiftwidth=2
 set softtabstop=2
-set tabstop=2               
+set tabstop=2
 set autoindent
 set expandtab
 set listchars=tab:⇢\ ,trail:·
@@ -29,6 +29,7 @@ set ignorecase
 set smartcase
 
 " - etc -
+set noswapfile
 set autoread
 let mapleader = ","
 map <Leader>p <C-^> " Go to previous file
@@ -53,8 +54,10 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-pathogen'
+Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
+Bundle 'Lokaltog/powerline'
 
 filetype plugin indent on
 
