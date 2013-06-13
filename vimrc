@@ -9,6 +9,7 @@ set autoindent
 set expandtab
 set listchars=tab:⇢\ ,trail:·
 set list
+set noswapfile
 
 " - Line numbers -
 set number
@@ -57,6 +58,7 @@ Bundle 'tpope/vim-pathogen'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-fugitive'
 
 filetype plugin indent on
 
