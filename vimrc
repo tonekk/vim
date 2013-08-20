@@ -28,6 +28,8 @@ imap <right> <nop>
 " - Search -
 set ignorecase
 set smartcase
+set hlsearch
+set incsearch
 
 " - etc -
 set noswapfile
