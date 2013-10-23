@@ -28,7 +28,6 @@ imap <right> <nop>
 " - Search -
 set ignorecase
 set smartcase
-set hlsearch
 set incsearch
 
 " - etc -
@@ -61,6 +60,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'skalnik/vim-vroom'
 
 filetype plugin indent on
 
