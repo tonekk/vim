@@ -30,6 +30,9 @@ set ignorecase
 set smartcase
 set incsearch
 
+" - Backspace behavior -
+set backspace=indent,eol,start
+
 " - etc -
 set noswapfile
 set autoread
@@ -39,7 +42,7 @@ map <Leader>w :w!<CR>
 
 " - NERDTree -
 " Auto open, if no file supplied
-autocmd vimenter * if !argc() | NERDTree | endif
+" autocmd vimenter * if !argc() | NERDTree | endif
 " Auto close if only window is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <Leader>n :NERDTreeToggle<CR>
