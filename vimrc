@@ -1,4 +1,4 @@
-" My personal vimrc
+﻿" My personal vimrc
 
 " - Tabs/Spaces -
 set smarttab
@@ -39,6 +39,10 @@ set autoread
 let mapleader = ","
 map <Leader>p <C-^> " Go to previous file
 map <Leader>w :w!<CR>
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+  \ 'file': '\.exe$\|\.so$\|\.dat$'
+  \ }
 
 " - NERDTree -
 " Auto open, if no file supplied
