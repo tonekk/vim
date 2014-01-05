@@ -7,7 +7,7 @@ set softtabstop=2
 set tabstop=2
 set autoindent
 set expandtab
-set listchars=tab:⇢\ ,trail:·
+set listchars=tab:>-,trail:.,extends:>
 set list
 set noswapfile
 
