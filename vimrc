@@ -44,12 +44,12 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.exe$\|\.so$\|\.dat$'
   \ }
   
-" - Easier handling of brackets -                                                                                                                                                                                     
-inoremap ( ()<Esc>:let leavechar=")"<CR>i                                                                                                                                                                            
-inoremap [ []<Esc>:let leavechar="]"<CR>i                                                                                                                                                                            
-inoremap { {}<Esc>:let leavechar="}"<CR>i                                                                                                                                                                            
-inoremap " ""<Esc>:let leavechar='"'<CR>i                                                                                                                                                                            
-inoremap ' ''<Esc>:let leavechar="'"<CR>i                                                                                                                                                                            
+" - Easier handling of brackets -
+inoremap ( ()<Esc>:let leavechar=")"<CR>i
+inoremap [ []<Esc>:let leavechar="]"<CR>i
+inoremap { {}<Esc>:let leavechar="}"<CR>i
+inoremap " ""<Esc>:let leavechar='"'<CR>i
+inoremap ' ''<Esc>:let leavechar="'"<CR>i
 imap <C-j> <Esc>:exec "normal f" . leavechar<CR>a
 
 " - NERDTree -
