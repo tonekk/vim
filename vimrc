@@ -53,8 +53,6 @@ inoremap ' ''<Esc>:let leavechar="'"<CR>i
 imap <C-j> <Esc>:exec "normal f" . leavechar<CR>a
 
 " - NERDTree -
-" Auto open, if no file supplied
-" autocmd vimenter * if !argc() | NERDTree | endif
 " Auto close if only window is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <Leader>n :NERDTreeToggle<CR>
