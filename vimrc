@@ -43,14 +43,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
   \ 'file': '\.exe$\|\.so$\|\.dat$'
   \ }
-  
-" - Easier handling of brackets -
-inoremap ( ()<Esc>:let leavechar=")"<CR>i
-inoremap [ []<Esc>:let leavechar="]"<CR>i
-inoremap { {}<Esc>:let leavechar="}"<CR>i
-inoremap " ""<Esc>:let leavechar='"'<CR>i
-inoremap ' ''<Esc>:let leavechar="'"<CR>i
-imap <C-j> <Esc>:exec "normal f" . leavechar<CR>a
+let g:AutoPairsShortcutJump = '<C-n>'
 
 " - NERDTree -
 " Auto close if only window is NERDTree
@@ -73,6 +66,9 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'skalnik/vim-vroom'
 Bundle 'kien/ctrlp.vim'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'jiangmiao/auto-pairs'
+Bundle 'tpope/vim-surround'
 
 filetype plugin indent on
 
