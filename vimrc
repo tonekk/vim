@@ -40,10 +40,9 @@ let mapleader = ","
 map <Leader>p <C-^> " Go to previous file
 map <Leader>w :w!<CR>
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp\|node_modules$',
   \ 'file': '\.exe$\|\.so$\|\.dat$'
   \ }
-let g:AutoPairsShortcutJump = '<C-n>'
 
 " - NERDTree -
 " Auto close if only window is NERDTree
@@ -60,15 +59,18 @@ Bundle 'gmarik/vundle'
 
 " - Plugins -
 Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-pathogen'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
-Bundle 'skalnik/vim-vroom'
 Bundle 'kien/ctrlp.vim'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'jiangmiao/auto-pairs'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-haml'
+
+" - Node.js -
+Bundle 'juvenn/mustache.vim'
+Bundle 'moll/vim-node'
+Bundle "pangloss/vim-javascript"
 
 filetype plugin indent on
 
