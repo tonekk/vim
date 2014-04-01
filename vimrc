@@ -66,11 +66,15 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-haml'
+Bundle 'othree/html5.vim'
+Bundle 'plasticboy/vim-markdown'
 
 " - Node.js -
 Bundle 'juvenn/mustache.vim'
 Bundle 'moll/vim-node'
-Bundle "pangloss/vim-javascript"
+Bundle 'pangloss/vim-javascript'
+
+Bundle 'jnwhiteh/vim-golang'
 
 filetype plugin indent on
 
