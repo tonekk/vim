@@ -68,6 +68,11 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-haml'
 Bundle 'othree/html5.vim'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'skwp/greplace.vim'
+
+" - Minitest -
+Bundle 'fheemeyer/vim-ruby-minitest'
+set completefunc=syntaxcomplete#Complete
 
 " - Node.js -
 Bundle 'juvenn/mustache.vim'
