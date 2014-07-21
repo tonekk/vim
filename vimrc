@@ -44,6 +44,20 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.exe$\|\.so$\|\.dat$'
   \ }
 
+" windows creation
+"   split window
+nnoremap <Leader>s <c-w>s
+"   vertical split window
+nnoremap <Leader>v <c-w>v
+"   close window
+nnoremap <Leader>q <c-w>q
+
+" window movement
+nnoremap <c-j> <c-w>j
+nnoremap <c-h> <c-w>h
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
 " - NERDTree -
 " Auto close if only window is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
