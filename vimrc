@@ -11,6 +11,9 @@ set listchars=tab:>-,trail:.,extends:>
 set list
 set noswapfile
 
+" - encoding -
+set encoding=utf-8
+
 " - Line numbers -
 set number
 
@@ -112,7 +115,6 @@ Bundle 'tpope/vim-haml'
 Bundle 'othree/html5.vim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'skwp/greplace.vim'
-Bundle 'msanders/snipmate.vim'
 
 filetype plugin indent on
 
