@@ -11,6 +11,9 @@ set listchars=tab:>-,trail:.,extends:>
 set list
 set noswapfile
 
+" - encoding -
+set encoding=utf-8
+
 " - Line numbers -
 set number
 
