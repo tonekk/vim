@@ -102,10 +102,14 @@ map <Leader>zz :ZeusTest %<CR>
 map <Leader>zi :VimuxInspectRunner<CR>
 map <Leader>zq :VimuxCloseRunner<CR>
 
-" - Node.js -
+" - Javascript -
 Bundle 'juvenn/mustache.vim'
 Bundle 'moll/vim-node'
+Bundle 'burnettk/vim-angular'
+Bundle 'matthewsimo/angular-vim-snippets'
 Bundle 'pangloss/vim-javascript'
+Bundle 'othree/javascript-libraries-syntax.vim'
+let g:used_javascript_libs = 'jquery,underscore,angularjs,jasmine'
 
 " - Other stuff -
 Bundle 'jnwhiteh/vim-golang'
@@ -115,6 +119,10 @@ Bundle 'tpope/vim-haml'
 Bundle 'othree/html5.vim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'skwp/greplace.vim'
+
+" - Snippets -
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
 
 filetype plugin indent on
 
