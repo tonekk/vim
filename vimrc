@@ -47,12 +47,18 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.exe$\|\.so$\|\.dat$'
   \ }
 
-" windows creation
-"   split window
+" - Force writing file as root -
+cmap w!! w !sudo tee > /dev/null %
+
+" - Reopen file (to e.g. reload .vimrc) -
+cmap reload !vim %
+
+" - windows creation -
+" * split window
 nnoremap <Leader>s <c-w>s
-"   vertical split window
+" * vertical split window
 nnoremap <Leader>v <c-w>v
-"   close window
+" * close window
 nnoremap <Leader>q <c-w>q
 
 " window movement
@@ -90,17 +96,13 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 
 " - Minitest -
-Bundle 'fheemeyer/vim-ruby-minitest'
+Bundle 'tonekk/vim-ruby-minitest'
 set completefunc=syntaxcomplete#Complete
 
 " - tmux & zeus -
 Bundle 'benmills/vimux'
-Bundle 'jingweno/vimux-zeus'
-map <Leader>zc :ZeusConsole<CR>
-map <Leader>zr :ZeusRake<CR>
-map <Leader>zz :ZeusTest %<CR>
-map <Leader>zi :VimuxInspectRunner<CR>
-map <Leader>zq :VimuxCloseRunner<CR>
+map <leader>t :call VimuxRunCommand("clear && bin/spring rake test TEST=" . expand("%"))<CR>
+map <leader>q :call VimuxCloseRunner()<CR>
 
 " - Javascript -
 Bundle 'juvenn/mustache.vim'
