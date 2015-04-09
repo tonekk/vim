@@ -43,8 +43,8 @@ let mapleader = ","
 map <Leader>p <C-^> " Go to previous file
 map <Leader>w :w!<CR>
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|log\|tmp\|node_modules$',
-  \ 'file': '\.exe$\|\.so$\|\.dat$'
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|log\|tmp\|node_modules\|bower_components\|vendor$',
+  \ 'file': '\.exe$\|\.so$\|\.dat\|\.gem$'
   \ }
 
 " - Force writing file as root -
@@ -99,28 +99,39 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tonekk/vim-ruby-minitest'
 set completefunc=syntaxcomplete#Complete
 
-" - tmux & zeus -
+" - tmux & spring -
 Bundle 'benmills/vimux'
 map <leader>t :call VimuxRunCommand("clear && bin/spring rake test TEST=" . expand("%"))<CR>
+map <leader>r :call VimuxRunCommand("clear && zet " . expand("%"))<CR>
 map <leader>q :call VimuxCloseRunner()<CR>
 
 " - Javascript -
-Bundle 'juvenn/mustache.vim'
+Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'moll/vim-node'
 Bundle 'burnettk/vim-angular'
 Bundle 'matthewsimo/angular-vim-snippets'
 Bundle 'pangloss/vim-javascript'
 Bundle 'othree/javascript-libraries-syntax.vim'
-let g:used_javascript_libs = 'jquery,underscore,angularjs,jasmine'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'kchmck/vim-coffee-script'
+let g:used_javascript_libs = 'jquery,underscore,angularjs,jasmine,ember'
 
 " - Other stuff -
 Bundle 'jnwhiteh/vim-golang'
-Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-commentary'
 Bundle 'othree/html5.vim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'skwp/greplace.vim'
+Bundle 'rking/ag.vim'
+Bundle 'vim-scripts/ruby-matchit'
+
+" - Rails -
+Bundle 'tpope/vim-rails'
+Bundle 'Keithbsmiley/rspec.vim'
+Bundle 'slim-template/vim-slim'
+Bundle 'ck3g/vim-change-hash-syntax'
 
 " - Snippets -
 Bundle 'SirVer/ultisnips'
