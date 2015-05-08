@@ -97,6 +97,7 @@ Bundle 'kien/ctrlp.vim'
 
 " - Minitest -
 Bundle 'tonekk/vim-ruby-minitest'
+Bundle 'tonekk/vim-ruby-capybara'
 set completefunc=syntaxcomplete#Complete
 
 " - tmux & spring -
@@ -126,12 +127,14 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'skwp/greplace.vim'
 Bundle 'rking/ag.vim'
 Bundle 'vim-scripts/ruby-matchit'
+Bundle 'tmux-plugins/vim-tmux'
 
 " - Rails -
 Bundle 'tpope/vim-rails'
 Bundle 'Keithbsmiley/rspec.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'ck3g/vim-change-hash-syntax'
+Bundle 'tonekk/vim-binding-pry'
 
 " - Snippets -
 Bundle 'SirVer/ultisnips'
