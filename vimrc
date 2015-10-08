@@ -102,7 +102,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 
 " - Minitest -
-Plugin 'tonekk/vim-ruby-minitest'
+Plugin 'sunaku/vim-ruby-minitest'
 Plugin 'tonekk/vim-ruby-capybara'
 set completefunc=syntaxcomplete#Complete
 
@@ -138,7 +138,7 @@ Plugin 'rking/ag.vim'
 Plugin 'vim-scripts/ruby-matchit'
 Plugin 'dsawardekar/wordpress.vim'
 Plugin 'tpope/vim-haml'
-Plugin 'tonekk/sass-convert.vim'
+Plugin 'jlong/sass-convert.vim'
 Plugin 'nicklasos/vim-jsx-riot'
 
 " - Snippets -
