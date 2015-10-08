@@ -56,6 +56,8 @@ cmap reload !vim %
 " - Toggle paste mode with ,z -
 set pastetoggle=<leader>z
 
+au BufNewFile,BufRead *.tag setlocal ft=javascript
+
 " - windows creation -
 " * split window
 nnoremap <Leader>s <c-w>s
@@ -133,6 +135,8 @@ Bundle 'vim-scripts/ruby-matchit'
 Bundle 'tmux-plugins/vim-tmux'
 Bundle 'dsawardekar/wordpress.vim'
 Bundle 'tpope/vim-haml'
+Bundle 'tonekk/sass-convert.vim'
+Bundle 'nicklasos/vim-jsx-riot'
 
 
 " - Rails -
