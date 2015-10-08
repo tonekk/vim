@@ -78,78 +78,82 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " map <Leader>-n to nerdtree
 map <Leader>n :NERDTreeToggle<CR>
 
-" - Vundle -
-filetype off "required!
+" - Required for vundle -
+set nocompatible
+filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
 
 " -------------
 " -- Plugins --
 " -------------
 
 " - Plugin management -
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-pathogen'
+Plugin 'gmarik/vundle'
+Plugin 'tpope/vim-pathogen'
 
 " - Git -
-Bundle 'tpope/vim-fugitive'
-Bundle 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 
 " - Getting around -
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
 
 " - Minitest -
-Bundle 'tonekk/vim-ruby-minitest'
-Bundle 'tonekk/vim-ruby-capybara'
+Plugin 'tonekk/vim-ruby-minitest'
+Plugin 'tonekk/vim-ruby-capybara'
 set completefunc=syntaxcomplete#Complete
 
 " - tmux & spring -
-Bundle 'benmills/vimux'
+Plugin 'benmills/vimux'
 map <leader>t :call VimuxRunCommand("clear && bin/spring rake test TEST=" . expand("%"))<CR>
 map <leader>r :call VimuxRunCommand("clear && zet " . expand("%"))<CR>
 map <leader>q :call VimuxCloseRunner()<CR>
 
 " - Javascript -
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'moll/vim-node'
-Bundle 'burnettk/vim-angular'
-Bundle 'matthewsimo/angular-vim-snippets'
-Bundle 'pangloss/vim-javascript'
-Bundle 'othree/javascript-libraries-syntax.vim'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'moll/vim-node'
+Plugin 'burnettk/vim-angular'
+Plugin 'matthewsimo/angular-vim-snippets'
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'kchmck/vim-coffee-script'
 let g:used_javascript_libs = 'jquery,underscore,angularjs,jasmine,ember'
 
-" - Other stuff -
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-commentary'
-Bundle 'othree/html5.vim'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'skwp/greplace.vim'
-Bundle 'rking/ag.vim'
-Bundle 'vim-scripts/ruby-matchit'
-Bundle 'tmux-plugins/vim-tmux'
-Bundle 'dsawardekar/wordpress.vim'
-Bundle 'tpope/vim-haml'
-Bundle 'tonekk/sass-convert.vim'
-Bundle 'nicklasos/vim-jsx-riot'
+" - Ruby / Rails -
+Plugin 'tpope/vim-rails'
+Plugin 'Keithbsmiley/rspec.vim'
+Plugin 'slim-template/vim-slim'
+Plugin 'ck3g/vim-change-hash-syntax'
+Plugin 'tonekk/vim-binding-pry'
 
-
-" - Rails -
-Bundle 'tpope/vim-rails'
-Bundle 'Keithbsmiley/rspec.vim'
-Bundle 'slim-template/vim-slim'
-Bundle 'ck3g/vim-change-hash-syntax'
-Bundle 'tonekk/vim-binding-pry'
+" - Other language-related stuff -
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'othree/html5.vim'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'rking/ag.vim'
+Plugin 'vim-scripts/ruby-matchit'
+Plugin 'dsawardekar/wordpress.vim'
+Plugin 'tpope/vim-haml'
+Plugin 'tonekk/sass-convert.vim'
+Plugin 'nicklasos/vim-jsx-riot'
 
 " - Snippets -
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
+" - Vim Extensions -
+Plugin 'bling/vim-airline'
+Plugin 'skwp/greplace.vim'
+Plugin 'tmux-plugins/vim-tmux'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-commentary'
+
+call vundle#end()
 filetype plugin indent on
 
 " - Pathogen -
