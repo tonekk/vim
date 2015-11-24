@@ -43,7 +43,7 @@ let mapleader = ","
 map <Leader>p <C-^> " Go to previous file
 map <Leader>w :w!<CR>
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\|log\|tmp\|node_modules\|bower_components\|vendor\|dist$',
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\|log\|tmp\|node_modules\|_build\|bower_components\|vendor\|dist$',
   \ 'file': '\.exe$\|\.so$\|\.dat\|\.gem$'
   \ }
 
@@ -67,10 +67,10 @@ nnoremap <Leader>v <c-w>v
 nnoremap <Leader>q <c-w>q
 
 " window movement
-nnoremap <c-j> <c-w>j
-nnoremap <c-h> <c-w>h
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
+noremap   <Up>     <C-w><C-k>
+noremap   <Down>   <C-w><C-j>
+noremap   <Left>   <C-w><C-h>
+noremap   <Right>  <C-w><C-l>
 
 " - NERDTree -
 " Auto close if only window is NERDTree
@@ -121,6 +121,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'mtscout6/vim-cjsx'
 let g:used_javascript_libs = 'jquery,underscore,angularjs,jasmine,ember'
 
 " - Ruby / Rails -
