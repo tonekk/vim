@@ -14,8 +14,9 @@ set noswapfile
 " - encoding -
 set encoding=utf-8
 
-" - Line numbers -
+" - Line numbers / highlighting -
 set number
+set cursorline
 
 " - Disable Cursorkeys -
 map <up> <nop>
@@ -143,7 +144,6 @@ Plugin 'jlong/sass-convert.vim'
 Plugin 'nicklasos/vim-jsx-riot'
 
 " - Snippets -
-Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 " - Vim Extensions -
@@ -153,6 +153,10 @@ Plugin 'tmux-plugins/vim-tmux'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
+Plugin 'mbbill/undotree'
+" Map <F5> to undotree
+nnoremap <F5> :UndotreeToggle<cr>
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
 call vundle#end()
 filetype plugin indent on
@@ -162,10 +166,10 @@ execute pathogen#infect()
 
 " - Colorization"
 syntax enable
-if has('gui_running')
-  set background=light
-else
-  set background=dark
+colorscheme dracula
+
+" - Persistent undo"
+if has("persistent_undo")
+  set undodir=~/etc/vim/undo
+  set undofile
 endif
-colorscheme solarized
-let g:solarized_termcolors=256
