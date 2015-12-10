@@ -53,6 +53,7 @@ cmap w!! w !sudo tee > /dev/null %
 
 " - Reopen file (to e.g. reload .vimrc) -
 cmap reload !vim %
+map <Leader>r :reload<CR>
 
 " - Toggle paste mode with ,z -
 set pastetoggle=<leader>z
@@ -65,7 +66,7 @@ nnoremap <Leader>s <c-w>s
 " * vertical split window
 nnoremap <Leader>v <c-w>v
 " * close window
-nnoremap <Leader>q <c-w>q
+map <Leader>q :q<CR>
 
 " window movement
 noremap   <Up>     <C-w><C-k>
@@ -109,9 +110,7 @@ set completefunc=syntaxcomplete#Complete
 
 " - tmux & spring -
 Plugin 'benmills/vimux'
-map <leader>t :call VimuxRunCommand("clear && bin/spring rake test TEST=" . expand("%"))<CR>
-map <leader>r :call VimuxRunCommand("clear && zet " . expand("%"))<CR>
-map <leader>q :call VimuxCloseRunner()<CR>
+" map <leader>t :call VimuxRunCommand("clear && bin/spring rake test TEST=" . expand("%"))<CR>
 
 " - Javascript -
 Plugin 'mustache/vim-mustache-handlebars'
@@ -147,6 +146,8 @@ Plugin 'nicklasos/vim-jsx-riot'
 Plugin 'honza/vim-snippets'
 
 " - Vim Extensions -
+Plugin 'yegappan/mru'
+map <Leader>m :MRU<CR>
 Plugin 'bling/vim-airline'
 Plugin 'skwp/greplace.vim'
 Plugin 'tmux-plugins/vim-tmux'
