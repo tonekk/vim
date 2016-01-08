@@ -129,14 +129,13 @@ Plugin 'mtscout6/vim-cjsx'
 let g:used_javascript_libs = 'jquery,underscore,angularjs,jasmine,ember'
 
 " - Ruby / Rails -
-Plugin 'tpope/vim-rails'
 Plugin 'Keithbsmiley/rspec.vim'
 Plugin 'slim-template/vim-slim'
 Plugin 'ck3g/vim-change-hash-syntax'
 Plugin 'tonekk/vim-binding-pry'
 
 " - Other language-related stuff -
-Plugin 'jnwhiteh/vim-golang'
+Plugin 'fatih/vim-go'
 Plugin 'othree/html5.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'rking/ag.vim'
