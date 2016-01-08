@@ -68,6 +68,10 @@ nnoremap <Leader>v <c-w>v
 " * close window
 map <Leader>q :q<CR>
 
+" Enable system clipboard yank
+nnoremap <Leader>c "2y
+nnoremap <Leader>v "2p
+
 " window movement
 noremap   <Up>     <C-w><C-k>
 noremap   <Down>   <C-w><C-j>
