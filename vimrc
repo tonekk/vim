@@ -177,3 +177,10 @@ if has("persistent_undo")
   set undodir=~/etc/vim/undo
   set undofile
 endif
+
+" Golang
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go set listchars=tab:--
