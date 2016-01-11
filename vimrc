@@ -161,6 +161,8 @@ Plugin 'mbbill/undotree'
 " Map <F5> to undotree
 nnoremap <F5> :UndotreeToggle<cr>
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+
 
 call vundle#end()
 filetype plugin indent on
@@ -170,7 +172,7 @@ execute pathogen#infect()
 
 " - Colorization"
 syntax enable
-colorscheme dracula
+colorscheme Tomorrow-Night-Eighties
 
 " - Persistent undo"
 if has("persistent_undo")
