@@ -149,6 +149,7 @@ Plugin 'nicklasos/vim-jsx-riot'
 Plugin 'honza/vim-snippets'
 
 " - Vim Extensions -
+Plugin 'tpope/vim-sensible'
 Plugin 'yegappan/mru'
 map <Leader>m :MRU<CR>
 Plugin 'bling/vim-airline'
