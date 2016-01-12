@@ -129,6 +129,8 @@ Plugin 'mtscout6/vim-cjsx'
 let g:used_javascript_libs = 'jquery,underscore,angularjs,jasmine,ember'
 
 " - Ruby / Rails -
+Plugin 'thoughtbot/vim-rspec'
+map <Leader>t :call RunCurrentSpecFile()<CR>
 Plugin 'Keithbsmiley/rspec.vim'
 Plugin 'slim-template/vim-slim'
 Plugin 'ck3g/vim-change-hash-syntax'
