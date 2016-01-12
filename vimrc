@@ -18,6 +18,9 @@ set encoding=utf-8
 set number
 set cursorline
 
+" - Do not scroll at the end of view -
+set scrolloff=5
+
 " - Disable Cursorkeys -
 map <up> <nop>
 map <down> <nop>
