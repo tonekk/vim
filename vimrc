@@ -1,6 +1,4 @@
-﻿" My personal vimrc
-
-" - Tabs/Spaces -
+﻿" Tabs/Spaces
 set smarttab
 set shiftwidth=2
 set softtabstop=2
@@ -11,17 +9,17 @@ set listchars=tab:>-,trail:.,extends:>
 set list
 set noswapfile
 
-" - encoding -
+" encoding
 set encoding=utf-8
 
-" - Line numbers / highlighting -
+" Line numbers / highlighting
 set number
 set cursorline
 
-" - Do not scroll at the end of view -
+" Do not scroll at the end of view
 set scrolloff=5
 
-" - Disable Cursorkeys -
+" Disable Cursorkeys
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
@@ -32,15 +30,15 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
-" - Search -
+" Search
 set ignorecase
 set smartcase
 set incsearch
 
-" - Backspace behavior -
+" Backspace behavior
 set backspace=indent,eol,start
 
-" - etc -
+" etc
 set noswapfile
 set autoread
 let mapleader = ","
@@ -51,19 +49,19 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.exe$\|\.so$\|\.dat\|\.gem$'
   \ }
 
-" - Force writing file as root -
+" Force writing file as root
 cmap w!! w !sudo tee > /dev/null %
 
-" - Reopen file (to e.g. reload .vimrc) -
+" Reopen file (to e.g. reload .vimrc)
 cmap reload !vim %
 map <Leader>r :reload<CR>
 
-" - Toggle paste mode with ,z -
+" Toggle paste mode with ,z
 set pastetoggle=<leader>z
 
 au BufNewFile,BufRead *.tag setlocal ft=javascript
 
-" - windows creation -
+" windows creation
 " * split window
 nnoremap <Leader>s <c-w>s
 " * vertical split window
@@ -81,13 +79,13 @@ noremap   <Down>   <C-w><C-j>
 noremap   <Left>   <C-w><C-h>
 noremap   <Right>  <C-w><C-l>
 
-" - NERDTree -
+" NERDTree
 " Auto close if only window is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " map <Leader>-n to nerdtree
 map <Leader>n :NERDTreeToggle<CR>
 
-" - Required for vundle -
+" Required for vundle
 set nocompatible
 filetype off
 
@@ -98,28 +96,28 @@ call vundle#begin()
 " -- Plugins --
 " -------------
 
-" - Plugin management -
+" Plugin management
 Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-pathogen'
 
-" - Git -
+" Git
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 
-" - Getting around -
+" Getting around
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 
-" - Minitest -
+" Minitest
 Plugin 'sunaku/vim-ruby-minitest'
 Plugin 'tonekk/vim-ruby-capybara'
 set completefunc=syntaxcomplete#Complete
 
-" - tmux & spring -
+" tmux & spring
 Plugin 'benmills/vimux'
 " map <leader>t :call VimuxRunCommand("clear && bin/spring rake test TEST=" . expand("%"))<CR>
 
-" - Javascript -
+" Javascript
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'moll/vim-node'
 Plugin 'burnettk/vim-angular'
@@ -131,7 +129,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'mtscout6/vim-cjsx'
 let g:used_javascript_libs = 'jquery,underscore,angularjs,jasmine,ember'
 
-" - Ruby / Rails -
+" Ruby / Rails
 Plugin 'thoughtbot/vim-rspec'
 map <Leader>t :call RunCurrentSpecFile()<CR>
 Plugin 'Keithbsmiley/rspec.vim'
@@ -139,7 +137,7 @@ Plugin 'slim-template/vim-slim'
 Plugin 'ck3g/vim-change-hash-syntax'
 Plugin 'tonekk/vim-binding-pry'
 
-" - Other language-related stuff -
+" Other language-related stuff
 Plugin 'fatih/vim-go'
 Plugin 'othree/html5.vim'
 Plugin 'plasticboy/vim-markdown'
@@ -150,10 +148,10 @@ Plugin 'tpope/vim-haml'
 Plugin 'jlong/sass-convert.vim'
 Plugin 'nicklasos/vim-jsx-riot'
 
-" - Snippets -
+" Snippets
 Plugin 'honza/vim-snippets'
 
-" - Vim Extensions -
+" Vim Extensions
 Plugin 'tpope/vim-sensible'
 Plugin 'yegappan/mru'
 map <Leader>m :MRU<CR>
@@ -173,14 +171,14 @@ Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 call vundle#end()
 filetype plugin indent on
 
-" - Pathogen -
+" Pathogen
 execute pathogen#infect()
 
-" - Colorization"
+" Colorization
 syntax enable
 colorscheme Tomorrow-Night-Eighties
 
-" - Persistent undo"
+" Persistent undo
 if has("persistent_undo")
   set undodir=~/etc/vim/undo
   set undofile
@@ -192,3 +190,6 @@ au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go set listchars=tab:--
+
+" MacVim
+set guioptions-=r 
