@@ -85,6 +85,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " map <Leader>-n to nerdtree
 map <Leader>n :NERDTreeToggle<CR>
 
+" Use old regex engine, becasuse new one is slow with ruby
+set re=1
+
 " Required for vundle
 set nocompatible
 filetype off
@@ -108,20 +111,9 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 
-" Minitest
-Plugin 'sunaku/vim-ruby-minitest'
-Plugin 'tonekk/vim-ruby-capybara'
-set completefunc=syntaxcomplete#Complete
-
-" tmux & spring
-Plugin 'benmills/vimux'
-" map <leader>t :call VimuxRunCommand("clear && bin/spring rake test TEST=" . expand("%"))<CR>
-
 " Javascript
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'moll/vim-node'
-Plugin 'burnettk/vim-angular'
-Plugin 'matthewsimo/angular-vim-snippets'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'digitaltoad/vim-jade'
@@ -129,13 +121,18 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'mtscout6/vim-cjsx'
 let g:used_javascript_libs = 'jquery,underscore,angularjs,jasmine,ember'
 
-" Ruby / Rails
+" Ruby / Rails / RSpec / Minitest
 Plugin 'thoughtbot/vim-rspec'
 map <Leader>t :call RunCurrentSpecFile()<CR>
 Plugin 'Keithbsmiley/rspec.vim'
 Plugin 'slim-template/vim-slim'
 Plugin 'ck3g/vim-change-hash-syntax'
 Plugin 'tonekk/vim-binding-pry'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'sunaku/vim-ruby-minitest'
+Plugin 'tonekk/vim-ruby-capybara'
+set completefunc=syntaxcomplete#Complete
 
 " Other language-related stuff
 Plugin 'fatih/vim-go'
@@ -150,6 +147,10 @@ Plugin 'nicklasos/vim-jsx-riot'
 
 " Snippets
 Plugin 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " Vim Extensions
 Plugin 'tpope/vim-sensible'
@@ -192,4 +193,5 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go set listchars=tab:--
 
 " MacVim
-set guioptions-=r 
+set guioptions-=r
+set guioptions-=L
