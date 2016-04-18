@@ -124,17 +124,22 @@ let g:used_javascript_libs = 'jquery,underscore,angularjs,jasmine,ember'
 " Ruby / Rails / RSpec / Minitest
 Plugin 'thoughtbot/vim-rspec'
 map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+let g:rspec_command = "!bundle exec spring rspec {spec}"
 Plugin 'Keithbsmiley/rspec.vim'
 Plugin 'slim-template/vim-slim'
 Plugin 'ck3g/vim-change-hash-syntax'
 Plugin 'tonekk/vim-binding-pry'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-endwise'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'sunaku/vim-ruby-minitest'
 Plugin 'tonekk/vim-ruby-capybara'
+Plugin 'skalnik/vim-vroom'
 set completefunc=syntaxcomplete#Complete
 
 " Other language-related stuff
+Plugin 'rstacruz/sparkup'
 Plugin 'fatih/vim-go'
 Plugin 'othree/html5.vim'
 Plugin 'plasticboy/vim-markdown'
@@ -144,6 +149,21 @@ Plugin 'dsawardekar/wordpress.vim'
 Plugin 'tpope/vim-haml'
 Plugin 'jlong/sass-convert.vim'
 Plugin 'nicklasos/vim-jsx-riot'
+
+" Syntax
+Plugin 'scrooloose/syntastic'
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = {
+  \ "mode": "passive",
+  \ "active_filetypes": ["ruby"],
+  \ "passive_filetypes": [] }
 
 " Snippets
 Plugin 'honza/vim-snippets'
@@ -163,6 +183,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
 Plugin 'mbbill/undotree'
+Plugin 'tpope/vim-dispatch'
 " Map <F5> to undotree
 nnoremap <F5> :UndotreeToggle<cr>
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
