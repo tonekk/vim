@@ -111,6 +111,10 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 
+" Tags
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+
 " Javascript
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'moll/vim-node'
@@ -131,11 +135,13 @@ Plugin 'slim-template/vim-slim'
 Plugin 'ck3g/vim-change-hash-syntax'
 Plugin 'tonekk/vim-binding-pry'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'sunaku/vim-ruby-minitest'
 Plugin 'tonekk/vim-ruby-capybara'
 Plugin 'skalnik/vim-vroom'
+Plugin 'vim-scripts/ruby-matchit'
 set completefunc=syntaxcomplete#Complete
 
 " Other language-related stuff
@@ -144,11 +150,9 @@ Plugin 'fatih/vim-go'
 Plugin 'othree/html5.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'rking/ag.vim'
-Plugin 'vim-scripts/ruby-matchit'
-Plugin 'dsawardekar/wordpress.vim'
 Plugin 'tpope/vim-haml'
 Plugin 'jlong/sass-convert.vim'
-Plugin 'nicklasos/vim-jsx-riot'
+Plugin 'xolox/vim-notes'
 
 " Syntax
 Plugin 'scrooloose/syntastic'
