@@ -100,7 +100,7 @@ call vundle#begin()
 " -------------
 
 " Plugin management
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-pathogen'
 
 " Git
@@ -135,7 +135,6 @@ Plugin 'slim-template/vim-slim'
 Plugin 'ck3g/vim-change-hash-syntax'
 Plugin 'tonekk/vim-binding-pry'
 Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'sunaku/vim-ruby-minitest'
@@ -166,7 +165,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = {
   \ "mode": "passive",
-  \ "active_filetypes": ["ruby"],
+  \ "active_filetypes": ["ruby", "go"],
   \ "passive_filetypes": [] }
 
 " Snippets
@@ -191,7 +190,7 @@ Plugin 'tpope/vim-dispatch'
 " Map <F5> to undotree
 nnoremap <F5> :UndotreeToggle<cr>
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 
 call vundle#end()
@@ -216,6 +215,9 @@ au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go set listchars=tab:--
+let g:go_fmt_command = "goimports"
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 " MacVim
 set guioptions-=r
