@@ -8,6 +8,7 @@ set expandtab
 set listchars=tab:>-,trail:.,extends:>
 set list
 set noswapfile
+set hidden
 
 " encoding
 set encoding=utf-8
@@ -48,6 +49,22 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\|log\|tmp\|node_modules\|_build\|bower_components\|vendor\|dist$',
   \ 'file': '\.exe$\|\.so$\|\.dat\|\.gem$'
   \ }
+" Easy bindings for its various modes
+nmap <leader>bb :CtrlPBuffer<cr>
+nmap <leader>bs :CtrlPMRU<cr>
+nmap <leader>bx :CtrlPMixed<cr>
+
+" handling buffers
+
+" Open a new empty buffer
+nmap <C-T> :enew<CR>
+" Move to the next buffer
+nmap <C-l> :bnext<CR>
+" Move to the previous buffer
+nmap <C-h> :bprevious<CR>
+" Close the current buffer and move to the previous one
+" Remapping control-c, because lol
+nmap <C-c> :bp <BAR> bd #<CR>
 
 " Force writing file as root
 cmap w!! w !sudo tee > /dev/null %
@@ -218,6 +235,11 @@ au FileType go set listchars=tab:--
 let g:go_fmt_command = "goimports"
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " MacVim
 set guioptions-=r
