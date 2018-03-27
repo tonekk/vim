@@ -164,6 +164,7 @@ set completefunc=syntaxcomplete#Complete
 Plugin 'rstacruz/sparkup'
 Plugin 'fatih/vim-go'
 Plugin 'othree/html5.vim'
+let g:vim_markdown_folding_disabled = 1
 Plugin 'plasticboy/vim-markdown'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-haml'
