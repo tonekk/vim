@@ -46,7 +46,7 @@ let mapleader = ","
 map <Leader>p <C-^> " Go to previous file
 map <Leader>w :w!<CR>
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\|log\|tmp\|node_modules\|_build\|bower_components\|vendor\|dist$',
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\|log\|tmp\|berks-cookbooks\|node_modules\|_build\|bower_components\|vendor\|dist$',
   \ 'file': '\.exe$\|\.so$\|\.dat\|\.gem$'
   \ }
 " Easy bindings for its various modes
@@ -159,16 +159,13 @@ Plugin 'tonekk/vim-ruby-capybara'
 Plugin 'skalnik/vim-vroom'
 Plugin 'vim-scripts/ruby-matchit'
 set completefunc=syntaxcomplete#Complete
+Plugin 'sheerun/vim-polyglot'
 
 " Other language-related stuff
 Plugin 'rstacruz/sparkup'
-Plugin 'fatih/vim-go'
-Plugin 'othree/html5.vim'
 let g:vim_markdown_folding_disabled = 1
 Plugin 'plasticboy/vim-markdown'
 Plugin 'rking/ag.vim'
-Plugin 'tpope/vim-haml'
-Plugin 'jlong/sass-convert.vim'
 Plugin 'xolox/vim-notes'
 
 " Syntax
