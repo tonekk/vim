@@ -128,67 +128,24 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 
-" Tags
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
-
 " Javascript
-Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'moll/vim-node'
 Plugin 'pangloss/vim-javascript'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'mtscout6/vim-cjsx'
-let g:used_javascript_libs = 'jquery,underscore,angularjs,jasmine,ember'
-
-" Ruby / Rails / RSpec / Minitest
-Plugin 'thoughtbot/vim-rspec'
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-let g:rspec_command = "!bundle exec spring rspec {spec}"
-Plugin 'Keithbsmiley/rspec.vim'
-Plugin 'slim-template/vim-slim'
-Plugin 'ck3g/vim-change-hash-syntax'
-Plugin 'tonekk/vim-binding-pry'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-endwise'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'sunaku/vim-ruby-minitest'
-Plugin 'tonekk/vim-ruby-capybara'
-Plugin 'skalnik/vim-vroom'
-Plugin 'vim-scripts/ruby-matchit'
-set completefunc=syntaxcomplete#Complete
-Plugin 'sheerun/vim-polyglot'
+Plugin 'MaxMEllon/vim-jsx-pretty'
 
 " Other language-related stuff
 Plugin 'rstacruz/sparkup'
 let g:vim_markdown_folding_disabled = 1
 Plugin 'plasticboy/vim-markdown'
 Plugin 'rking/ag.vim'
-Plugin 'xolox/vim-notes'
 
 " Syntax
-Plugin 'scrooloose/syntastic'
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = {
-  \ "mode": "passive",
-  \ "active_filetypes": ["ruby", "go"],
-  \ "passive_filetypes": [] }
-
-" Snippets
-Plugin 'honza/vim-snippets'
-Plugin 'SirVer/ultisnips'
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+Plugin 'w0rp/ale'
+let g:ale_linters = { 'javascript': ['eslint'], 'typescript': ['tslint'] }
+let g:ale_fixers = { 'javascript': ['prettier']}
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠'
+let g:ale_fix_on_save = 1
 
 " Vim Extensions
 Plugin 'tpope/vim-sensible'
